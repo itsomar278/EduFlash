@@ -1,0 +1,81 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopicPickActivity">
+
+    <TextView
+        android:id="@+id/TopicNotFound"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:editable="false"
+        android:text="Enter your Topic if it's new"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Topic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopicsSpinner" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:layout_marginBottom="14dp"
+        android:editable="false"
+        android:text="Pick The Topic"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/TopicsSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/TopicsSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="53dp"
+        android:background="@drawable/spinner_border"
+        android:contentDescription="Select topic"
+        android:contextClickable="false"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/TopicNotFound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/Topic"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="74dp"
+        android:background="#6A6A6A"
+        android:text="Your Topic : "
+        android:textCursorDrawable="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/NextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopicNotFound" />
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="197dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Topic" />
+</androidx.constraintlayout.widget.ConstraintLayout>
