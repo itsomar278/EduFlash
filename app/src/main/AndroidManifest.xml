@@ -12,6 +12,9 @@
         android:theme="@style/Theme.EduFlash"
         tools:targetApi="31">
         <activity
+            android:name=".StudyActivity"
+            android:exported="false" />
+        <activity
             android:name=".TopicPickActivity"
             android:exported="false" />
         <activity

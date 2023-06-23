@@ -2,7 +2,9 @@ package com.example.eduflash;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,11 +43,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.studyBtn:
                 // Button "Study" is pressed
                 // Start the desired activity
-                /*
+
                 Intent studyIntent = new Intent(MainActivity.this, StudyActivity.class);
                 startActivity(studyIntent);
 
-                 */
+
                 break;
             case R.id.quickQuizBtn:
                 /*

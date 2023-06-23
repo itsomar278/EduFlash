@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -67,7 +68,7 @@ public class TopicPickActivity extends AppCompatActivity implements View.OnClick
                 TopicTextView.setText("");
             }
         } else if (view.getId() == R.id.NextButton) {
-            if (!TopicsSpinner.getSelectedItem().toString().equals("NONE")) {
+            if (TopicsSpinner.getSelectedItem() != null && !TopicsSpinner.getSelectedItem().toString().equals("NONE")) {
                 String topic = TopicsSpinner.getSelectedItem().toString();
                 Intent intent = new Intent(TopicPickActivity.this, Add_New_Activity.class);
                 intent.putExtra("Topic", topic);
